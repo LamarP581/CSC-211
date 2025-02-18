@@ -1,0 +1,40 @@
+
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Tester {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Automobile automobiles [] = new Automobile[4];
+        
+        automobiles [0] = new Car (2024,"Honda");
+        automobiles [1] = new Sportcar (2017,"Lambroghini");
+        automobiles [2] = new JunkCar (1987,"Toyota");
+        automobiles [3] = new Sportcar (2024,"Mustang");
+        
+        for(int i= 0; i < automobiles.length; i++){
+            Automobile automobile = automobiles[i];
+            System.out.println(automobile);
+            automobile.toString();
+            automobile.honk();
+            automobile.accelerate();
+            automobile.stop();
+            automobile.reverse();
+           
+            System.out.println();
+        }
+        System.out.println("Comparion between the first two cars " + automobiles[0].compareTo(automobiles[1]));
+        System.out.println("Are the last two cars equal: " + automobiles[3].equals(automobiles[2]));
+    }
+    
+}

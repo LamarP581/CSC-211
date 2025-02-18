@@ -1,0 +1,59 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Automobile {
+    protected int modelYear;
+    protected String brand;
+    
+    public Automobile(int modelYear, String brand){
+        this.modelYear = modelYear;
+        this.brand = brand;
+    }
+    public Automobile (Automobile obj){
+        modelYear = obj.modelYear;
+        brand = obj.brand;
+    }
+    
+    public void honk(){
+        System.out.println("Honk!");
+    }
+   public void stop () {
+        System.out.println("The car has come to a stop");
+    }
+   public void accelerate () {
+       System.out.println("The car is accelerating at great speed");
+   }
+    public void reverse () {
+        System.out.println("The car is reversing ");
+    }
+    public int getmodelYear(){
+        return modelYear;
+    }
+    public String getBrand(){
+        return brand;
+    }
+    @Override
+    public String toString(){
+        return "Automobile: " + getmodelYear() + getBrand();
+    }
+    
+    public boolean equals(Automobile obj2){
+       if(modelYear == (obj2.modelYear) && brand == (obj2.brand) ){
+           return true;
+       }
+       else 
+           return false;
+    }
+    public int compareTo (Automobile other){
+        return Integer.compare(modelYear, other.modelYear);
+    }
+    
+}
+

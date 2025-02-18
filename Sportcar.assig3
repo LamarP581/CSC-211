@@ -1,0 +1,35 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Sportcar extends Automobile {
+    public Sportcar (int modelYear ,String brand){
+        super(modelYear,brand);
+    }
+    @Override
+    public void accelerate () {
+        System.out.println("The sportcar is accelerating at rapid speed");
+    }
+    @Override
+    public void stop () {
+        System.out.println("The sportcar has come to rapid stop");
+    }
+    @Override
+    public void reverse () {
+        System.out.println("The sportcar is reversing very fast ");
+    }
+    @Override
+    public void honk () {
+        System.out.println("Sportcar Honk!");
+    }
+    @Override
+    public String toString () {
+    return "SportCar: " + modelYear + brand;    
+    }
+}

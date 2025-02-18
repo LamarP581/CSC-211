@@ -1,0 +1,35 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Car extends Automobile {
+    public Car (int modelYear ,String brand){
+        super(modelYear,brand);
+    }
+    @Override
+    public void accelerate () {
+        System.out.println("The car is accelerating at great speed");
+    }
+    @Override
+    public void stop () {
+        System.out.println("The car has come to a stop");
+    }
+    @Override
+    public void reverse () {
+        System.out.println("The car is reversing ");
+    }
+    @Override
+    public void honk () {
+        System.out.println("Car Honk!");
+    }
+    @Override
+    public String toString () {
+    return "Car: " + getmodelYear() + getBrand();    
+    }
+}
