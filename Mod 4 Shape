@@ -1,0 +1,25 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Program {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Rectangle rectangle = new Rectangle ();
+       Circle circle = new Circle();
+       System.out.println("Number of points in Rectangle: " + rectangle.getNumofpoints() + " Number of sides in a Rectangle: " + rectangle.getNumofsides());
+       
+      
+       System.out.println("Number of points in Circle: " + circle.getNumofpoints() + " Number of sides in a Rectangle: " + circle.getNumofsides());
+    }
+    
+}

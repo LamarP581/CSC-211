@@ -1,0 +1,36 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Shape {
+private int numofPoints;
+private int numofSides;
+
+
+
+public Shape (int numofPoints, int numofSides){
+    this.numofPoints = numofPoints;
+    this.numofSides = numofSides;
+}
+
+
+
+public int getNumofpoints(){
+    return numofPoints;
+}
+
+
+public int getNumofsides(){
+    return numofSides;
+}
+public void setnumsidesOrpoints(int numofPoints, int numofSides){
+    this.numofPoints = numofPoints;
+    this.numofSides = numofSides;
+}
+}
