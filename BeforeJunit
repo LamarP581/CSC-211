@@ -1,0 +1,28 @@
+import java.util.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+
+
+public class Program {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner console = new Scanner(System.in);
+       System.out.print("Enter the wholesale cost of the item: ");
+       double  wholeCost = console.nextInt();
+         System.out.println("Enter the markup percentage: ");
+       double markup = console.nextInt();
+     
+       System.out.println("If an items wholesale cost is " + wholeCost + " and its markup percentage is " + markup + " then the items retail price is " + retail_price( wholeCost,markup ));
+     
+    }
+    public static double retail_price(double wholeCost, double markup ){
+        return ( markup / 100 * wholeCost + wholeCost  );
+    }
+}
+
