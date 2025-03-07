@@ -1,0 +1,27 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class SimpleCalc {
+
+    public int add (int numberA, int numberB){
+        return numberA + numberB;
+    }
+    public static void main(String[] args) {
+        int numberA = 0;
+        int numberB = 5;
+        
+        SimpleCalc calc = new SimpleCalc();
+        
+        int sum = calc.add(numberA,numberB);
+        
+        System.out.println("The sum : " + sum);
+    }
+    
+}
