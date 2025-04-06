@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+
+
+
+
+
+public class PassFailExamD extends GradedAcitivty {
+    private double pointsEach;
+    private int questions;
+    private int missed;
+    private double minPassing;
+   
+    public PassFailExamD(int questions, int missed, double minPassing){
+        this.questions = questions;
+        this.missed = missed;
+        this.minPassing = minPassing;
+        
+        pointsEach = 100.0/ questions;
+        double score = 100.0 -(missed * pointsEach);
+        setScore(score);
+
+    }
+    public double getPointsEach(){
+        return pointsEach;
+    }
+    @Override
+    public char getGrade(){
+        if (getScore()>= minPassing)
+            return'P';
+        else
+            return'F';
+    }
+            
+        
+            
+        }
+    
+        
+
+
+  
