@@ -1,0 +1,27 @@
+import java.util.Scanner;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Program {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Shape[]shapes = new Shape[3];
+    shapes[0]= new Rectangle();
+    shapes[1]= new Circle();
+    shapes[2]= new Hexagon();
+    
+    for(Shape shape : shapes){
+        shape.describeShape();
+        System.out.println();
+    }
+}
+}

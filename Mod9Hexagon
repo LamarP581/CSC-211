@@ -1,0 +1,19 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Hexagon extends Shape {
+ public Hexagon(){
+        super(8,8, new Color("Purple"));
+    }
+    @Override
+    public void describeShape(){
+        System.out.println("This is a Hexagon.");
+        super.describeShape();
+    }
+}
