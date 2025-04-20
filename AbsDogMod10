@@ -1,0 +1,14 @@
+public class Dog extends Animal{
+   Dog(String name,int age,String breed){
+       super( name, age,breed);
+   }
+   public void dogInfo(){
+       super.printInfo();
+   }
+    
+        
+    @Override
+    public void makenosie(){
+        System.out.println("Woof ,Woof!!");
+    }
+}

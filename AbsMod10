@@ -1,0 +1,25 @@
+import java.util.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Program {
+
+     public static void main(String[] args) {
+        Dog dog = new Dog("Brodie",8,"Husky");
+        dog.dogInfo();
+        dog.makenosie();
+        Bird bird = new Bird("Sam",20,"Hawk");
+        bird.BirdInfo();
+        bird.makenosie();
+        Cat cat = new Cat("Mufusa",35,"Lion");
+        cat.CatInfo();
+        cat.makenosie();
+    }
+    
+}

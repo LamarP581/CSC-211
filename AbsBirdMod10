@@ -1,0 +1,14 @@
+public class Bird extends Animal{
+   Bird(String name,int age,String breed){
+       super( name, age,breed);
+   }
+   public void BirdInfo(){
+       super.printInfo();
+   }
+    
+        
+    @Override
+    public void makenosie(){
+        System.out.println("KAKAAAA , KAKAAAA!!");
+    }
+}
