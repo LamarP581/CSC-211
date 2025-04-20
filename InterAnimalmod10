@@ -1,0 +1,6 @@
+
+public interface Animal {
+    int age = 1;
+    String name = "Brodie";
+   String breed = "Husky";
+}

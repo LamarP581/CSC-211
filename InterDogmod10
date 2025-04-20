@@ -1,0 +1,11 @@
+
+public class Dog implements Animal {
+   public void dogInfo(){
+       System.out.println("Name: " + name);
+       System.out.println("Age: " + age);
+       System.out.println("Breed: " + breed);
+}
+   public void makenoise(){
+       System.out.println("Woof!!");
+   }
+}
