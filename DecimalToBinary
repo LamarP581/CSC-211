@@ -1,0 +1,34 @@
+import java.util.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class DecimalToBinary {
+
+   public static void decimalTobinaryRecursive (int n ){
+    if (n > 1){
+        decimalTobinaryRecursive(n/2);
+    }
+    System.out.print(n%2);
+}
+   public static String decimalTobinaryIterative(int n) {
+       return Integer.toBinaryString(n);
+   }
+    public static void main(String[] args) {
+        int number = 23;
+        
+        System.out.println("Decimal: " + number);
+        
+        System.out.print("Binary (Recursive): ");
+        decimalTobinaryRecursive(number);
+        System.out.println();
+        
+        System.out.println("Binary (Iterative):  "+ decimalTobinaryIterative(number));
+    }
+    
+}
