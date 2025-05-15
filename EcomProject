@@ -1,0 +1,54 @@
+import java.util.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class program {
+
+   
+    public static void main(String[] args) {
+      List<Product> products = Arrays.asList(
+      new Electronics("Camera", 450.00),
+      new Clothing("Tshirt", 25.0), 
+      new Grocery("Bread", 2.5),
+      new Electronics("Monitor", 300.00),
+      new Clothing("Hat", 15.0), 
+      new Grocery("Juice", 3.75)
+      );
+      
+      Customer customer = new Customer("Lamar123");
+      Order order = new Order(customer);
+      order.addProduct(products.get(0));
+      order.addProduct(products.get(2));
+      order.addProduct(products.get(4));
+      
+      System.out.println("Order for: " + customer.getUsername());
+      order.printCart();
+      double total = order.calculateTotal();
+      System.out.printf("Total: $%.2f\n" , total);
+      
+      System.out.println("\nFiltered Clothing:");
+      for(Product p : products) {
+          if (p.getCategory().equals("Clothing")) {
+              System.out.println(p);
+              
+          }
+      }
+      System.out.println("\nProducts Sorted by Name:");
+      List<Product> sortedProducts = new ArrayList<>(products);
+      Collections.sort(sortedProducts, new Comparator<Product>(){
+         public int compare(Product p1, Product p2) {
+            return p1.getName().compareTo(p2.getName());
+         }
+      });
+      for (Product p: sortedProducts) {
+          System.out.println(p);
+      }
+    }
+    
+}

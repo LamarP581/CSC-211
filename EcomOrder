@@ -1,0 +1,45 @@
+import java.util.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author itlabs
+ */
+public class Order {
+    private List<Product> cart = new ArrayList<>();
+    private Customer customer;
+    
+    public Order(Customer customer){
+        this.customer = customer;
+    }
+    
+   public void addProduct(Product product) { 
+       cart.add(product);
+   }
+   public double calculateTax(double subtotal) {
+       return subtotal *0.08; 
+   }
+   public double calculateShipping(double subtotal) { 
+       return subtotal >= 500 ? 0 :20;
+   }
+   public double calculateTotal() {
+       double subtotal = 0;
+       for(Product p : cart){
+           subtotal += p.getPrice();
+       }
+       double tax = calculateTax(subtotal);
+       double shipping = calculateShipping (subtotal);
+       return subtotal + tax + shipping;
+   }
+   public void printCart() {
+       for (Product p: cart) { 
+           System.out.println(p);
+       }
+   }
+   public List<Product> getCart() {
+       return cart;
+   }
+}
